@@ -17,20 +17,19 @@
 					<h5>Informe uma palavra:</h5>
 					<p:inputTextarea rows="5" cols="30" counter="display"
 						maxlength="25" counterTemplate="{0} caractere(s) restante(s)."
-						autoResize="false" style="margin-left: 40px;" />
+						autoResize="false" style="margin-left: 40px" value="#{cifraCesarBean.entrada}" />
 					<h:outputText id="display" style="float: left; margin-left: 40px;" />
 				</p:column>
 			</p:row>
-
 
 			<p:row>
 				<p:column>
 					<h5>Informe um valor de Cifra:</h5>
 					<h:panelGrid columns="1" style="margin-left: 100px">
-						<p:inputText id="txt1" />
+						<p:inputText id="txt1" value="#{cifraCesarBean.cifra}" />
 						<p:slider for="txt1" />
 					</h:panelGrid>
-					<p:commandButton value="Codificar" id="btnCodificar" update="textoCriptografado"
+					<p:commandButton value="Codificar" id="btnCodificar" actionListener="#{cifraCesarBean.imprime()}" update="textoCriptografado"
 						style="top: 10px; margin-left: 150px;" />
 				</p:column>
 			</p:row>
@@ -38,7 +37,7 @@
 			<p:row>
 				<p:column>
 					<h5>Palavra Cifrada:</h5>
-					<p:inputTextarea rows="5" cols="30" autoResize="false" id="textoCriptografado" disabled="true"
+					<p:inputTextarea rows="5" cols="30" autoResize="false" id="textoCriptografado" value="#{cifraCesarBean.saida}" disabled="true" 
 						style="margin-left: 40px;" />
 				</p:column>
 			</p:row>
