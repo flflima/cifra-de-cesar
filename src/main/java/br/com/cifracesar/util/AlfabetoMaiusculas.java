@@ -1,6 +1,6 @@
 package br.com.cifracesar.util;
 
-public class AlfabetoMaiusculas 
+public abstract class AlfabetoMaiusculas extends Alfabeto
 {
 
 	private static char[] alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',

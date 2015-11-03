@@ -29,7 +29,7 @@
 						<p:inputText id="txt1" value="#{cifraCesarBean.cifra}" />
 						<p:slider for="txt1" />
 					</h:panelGrid>
-					<p:commandButton value="Codificar" id="btnCodificar" actionListener="#{cifraCesarBean.imprime()}" update="textoCriptografado"
+					<p:commandButton value="Codificar" id="btnCriptografarSaida" actionListener="#{cifraCesarBean.criptografarSaida()}" update="textoCriptografado"
 						style="top: 10px; margin-left: 150px;" />
 				</p:column>
 			</p:row>
