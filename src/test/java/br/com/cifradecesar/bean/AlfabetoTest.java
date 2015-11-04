@@ -38,7 +38,7 @@ public class AlfabetoTest
 	{
 		char branco = ' ';
 		
-		assertTrue(Alfabeto.isLetraUmEspacoEmBranco(branco));
+		assertTrue(Alfabeto.isEspacoEmBranco(branco));
 	}
 	
 	@Test
@@ -63,6 +63,28 @@ public class AlfabetoTest
 		assertTrue(Alfabeto.isSinalPontuacao(pontuacao3));
 		assertTrue(Alfabeto.isSinalPontuacao(pontuacao4));
 		assertTrue(Alfabeto.isSinalPontuacao(pontuacao5));
+	}
+
+	@Test
+	public void testeVerificaSeCharEhUmNumero()
+	{
+		char umNumero = '1';
+		char outroNumero = '9';
+
+		assertTrue(Alfabeto.isNumero(umNumero));
+		assertTrue(Alfabeto.isNumero(outroNumero));
+	}
+	
+	@Test
+	public void testeVerificaSeCharEhUmaLetraValida()
+	{
+		char primeiraLetra = 'a';
+		char segundaLetra = 'F';
+		char terceiraLetra = 'y';
+
+		assertTrue(Alfabeto.isLetraValida(primeiraLetra));
+		assertTrue(Alfabeto.isLetraValida(segundaLetra));
+		assertTrue(Alfabeto.isLetraValida(terceiraLetra));
 	}
 	
 }

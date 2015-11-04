@@ -23,5 +23,7 @@ Próximas correções:
 	* Permitir espaços em branco;		-- corrigido
 	* Aceitar pontuação;				-- incluído
 	* Aceitar caracteres acentuados;
-	* Aceitar caracteres especiais;
+	* Aceitar caracteres especiais;		-- incluído
+	* Aceitar letras;					-- incluído
+	* Se o char não existir exibir '_';	-- incluído
 	* Validar campos de entrada.

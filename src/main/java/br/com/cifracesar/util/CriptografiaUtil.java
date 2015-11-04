@@ -16,13 +16,12 @@ public abstract class CriptografiaUtil
 		{
 			char letraDaPalavra = letrasDaPalavra[i];
 			
-			if (Alfabeto.isLetraUmEspacoEmBranco(letraDaPalavra) || Alfabeto.isSinalPontuacao(letraDaPalavra))
+			if (Alfabeto.isEspacoEmBranco(letraDaPalavra) || 
+					Alfabeto.isSinalPontuacao(letraDaPalavra) || Alfabeto.isNumero(letraDaPalavra))
 			{
 				palavraCifrada.append(letraDaPalavra);
-				
-				continue;
 			} 
-			else
+			else if (Alfabeto.isLetraValida(letraDaPalavra))
 			{
 				int posicaoNoAlfabeto = (Alfabeto.posicaoLetraAlfabeto(letraDaPalavra) + cifra) % tamanhoAlfabeto;
 				
@@ -34,6 +33,10 @@ public abstract class CriptografiaUtil
 				}
 				
 				palavraCifrada.append(letra);
+			}
+			else
+			{
+				palavraCifrada.append('_');
 			}
 			
 		}

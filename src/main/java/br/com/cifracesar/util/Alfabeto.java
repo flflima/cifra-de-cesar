@@ -20,7 +20,7 @@ public abstract class Alfabeto
 		return posicaoLetra;
 	}
 
-	public static boolean isLetraUmEspacoEmBranco(char letraDaPalavra) 
+	public static boolean isEspacoEmBranco(char letraDaPalavra) 
 	{
 		return Character.isSpaceChar(letraDaPalavra);
 	}
@@ -35,5 +35,15 @@ public abstract class Alfabeto
 		String letra = "" + letraDaPalavra;
 		
 		return letra.matches("\\p{Punct}");
+	}
+
+	public static boolean isNumero(char letraDaPalavra) 
+	{
+		return Character.isDigit(letraDaPalavra);
+	}
+
+	public static boolean isLetraValida(char letraDaPalavra) 
+	{
+		return Character.isLetter(letraDaPalavra);
 	}
 }
