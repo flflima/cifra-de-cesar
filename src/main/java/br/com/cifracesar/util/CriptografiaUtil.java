@@ -16,7 +16,7 @@ public abstract class CriptografiaUtil
 		{
 			char letraDaPalavra = letrasDaPalavra[i];
 			
-			if (Character.isSpaceChar(letraDaPalavra))
+			if (Alfabeto.isLetraUmEspacoEmBranco(letraDaPalavra) || Alfabeto.isSinalPontuacao(letraDaPalavra))
 			{
 				palavraCifrada.append(letraDaPalavra);
 				
@@ -28,7 +28,7 @@ public abstract class CriptografiaUtil
 				
 				char letra = alfabetoMaisculas[posicaoNoAlfabeto];
 				
-				if (Character.isLowerCase(letraDaPalavra))
+				if (Alfabeto.isLetraMinuscula(letraDaPalavra))
 				{
 					letra = Character.toLowerCase(letra);
 				}

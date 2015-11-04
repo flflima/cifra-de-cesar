@@ -21,7 +21,7 @@ Próximas correções:
 
 	* Entender Maiúsculas e Minúsculas;	-- corrigido
 	* Permitir espaços em branco;		-- corrigido
-	* Aceitar pontuação;
+	* Aceitar pontuação;				-- incluído
 	* Aceitar caracteres acentuados;
 	* Aceitar caracteres especiais;
 	* Validar campos de entrada.

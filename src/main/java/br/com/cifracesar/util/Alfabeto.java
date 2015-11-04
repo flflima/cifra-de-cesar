@@ -19,4 +19,21 @@ public abstract class Alfabeto
 		
 		return posicaoLetra;
 	}
+
+	public static boolean isLetraUmEspacoEmBranco(char letraDaPalavra) 
+	{
+		return Character.isSpaceChar(letraDaPalavra);
+	}
+	
+	public static boolean isLetraMinuscula(char letraDaPalavra) 
+	{
+		return Character.isLowerCase(letraDaPalavra);
+	}
+
+	public static boolean isSinalPontuacao(char letraDaPalavra) 
+	{
+		String letra = "" + letraDaPalavra;
+		
+		return letra.matches("\\p{Punct}");
+	}
 }
