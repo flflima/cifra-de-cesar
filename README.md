@@ -19,8 +19,8 @@ Onde: 	C = Cifra
 		
 Próximas correções:
 
-	* Entender Maiúsculas e Minúsculas; -- corrigido
-	* Permitir espaços em branco;
+	* Entender Maiúsculas e Minúsculas;	-- corrigido
+	* Permitir espaços em branco;		-- corrigido
 	* Aceitar pontuação;
 	* Aceitar caracteres acentuados;
 	* Aceitar caracteres especiais;

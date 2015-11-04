@@ -26,12 +26,20 @@ public class CriptografiaTest
 		
 		assertEquals("dx", palavraNova);
 	}
-	
+
 	@Test
 	public void testeCriptografiaDeCesarComMaiusculasEMinusculas()
 	{
 		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "Oi", CIFRA);
 		
 		assertEquals("Dx", palavraNova);
+	}
+	
+	@Test
+	public void testeCriptografiaDeCesarComEspacosEmBranco()
+	{
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "TESTE COM ESPACO", CIFRA);
+		
+		assertEquals("ITHIT RDB THEPRD", palavraNova);
 	}
 }

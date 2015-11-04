@@ -16,16 +16,26 @@ public abstract class CriptografiaUtil
 		{
 			char letraDaPalavra = letrasDaPalavra[i];
 			
-			int posicaoNoAlfabeto = (Alfabeto.posicaoLetraAlfabeto(letraDaPalavra) + cifra) % tamanhoAlfabeto;
-			
-			char letra = alfabetoMaisculas[posicaoNoAlfabeto];
-			
-			if (Character.isLowerCase(letraDaPalavra))
+			if (Character.isSpaceChar(letraDaPalavra))
 			{
-				letra = Character.toLowerCase(letra);
+				palavraCifrada.append(letraDaPalavra);
+				
+				continue;
+			} 
+			else
+			{
+				int posicaoNoAlfabeto = (Alfabeto.posicaoLetraAlfabeto(letraDaPalavra) + cifra) % tamanhoAlfabeto;
+				
+				char letra = alfabetoMaisculas[posicaoNoAlfabeto];
+				
+				if (Character.isLowerCase(letraDaPalavra))
+				{
+					letra = Character.toLowerCase(letra);
+				}
+				
+				palavraCifrada.append(letra);
 			}
 			
-			palavraCifrada.append(letra);
 		}
 		
 		return palavraCifrada.toString();
