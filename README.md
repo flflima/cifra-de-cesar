@@ -15,7 +15,7 @@ Onde: 	C = Cifra
 		M = Letra (posição)
 		T = Troca fixa (chave)
 		
-* Desenvolvido em Java versão 1.8 e PrimeFaces 5.1
+* Desenvolvido em Java versão 1.8, PrimeFaces 5.1 e Eclipse Luna
 		
 Próximas correções:
 
