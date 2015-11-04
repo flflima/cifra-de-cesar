@@ -14,9 +14,18 @@ public abstract class CriptografiaUtil
 		
 		for (int i = 0; i < letrasDaPalavra.length; i++) 
 		{
-			int posicao = (Alfabeto.posicaoLetraAlfabeto(letrasDaPalavra[i]) + cifra) % tamanhoAlfabeto;
+			char letraDaPalavra = letrasDaPalavra[i];
 			
-			palavraCifrada.append(alfabetoMaisculas[posicao]);
+			int posicaoNoAlfabeto = (Alfabeto.posicaoLetraAlfabeto(letraDaPalavra) + cifra) % tamanhoAlfabeto;
+			
+			char letra = alfabetoMaisculas[posicaoNoAlfabeto];
+			
+			if (Character.isLowerCase(letraDaPalavra))
+			{
+				letra = Character.toLowerCase(letra);
+			}
+			
+			palavraCifrada.append(letra);
 		}
 		
 		return palavraCifrada.toString();

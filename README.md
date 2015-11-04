@@ -19,7 +19,7 @@ Onde: 	C = Cifra
 		
 Próximas correções:
 
-	* Entender Maiúsculas e Minúsculas;
+	* Entender Maiúsculas e Minúsculas; -- corrigido
 	* Permitir espaços em branco;
 	* Aceitar pontuação;
 	* Aceitar caracteres acentuados;

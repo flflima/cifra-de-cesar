@@ -12,11 +12,26 @@ public class CriptografiaTest
 	private static int CIFRA = 15;
 	
 	@Test
-	public void testeCriptografiaCifraDeCesar()
+	public void testeCriptografiaDeCesarApenasComMaiusculas()
 	{
 		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "OI", CIFRA);
 		
 		assertEquals("DX", palavraNova);
 	}
-
+	
+	@Test
+	public void testeCriptografiaDeCesarApenasComMinusculas()
+	{
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "oi", CIFRA);
+		
+		assertEquals("dx", palavraNova);
+	}
+	
+	@Test
+	public void testeCriptografiaDeCesarComMaiusculasEMinusculas()
+	{
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "Oi", CIFRA);
+		
+		assertEquals("Dx", palavraNova);
+	}
 }

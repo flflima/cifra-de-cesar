@@ -20,5 +20,17 @@ public class AlfabetoTest
 		
 		assertEquals(posicaoDessaLetra, 14);
 	}
+
+	@Test
+	public void testeEncontraPosicaoDeUmaLetraMinuscula() 
+	{
+		char[] letras = "oi".toCharArray();
+		
+		char umaLetra = letras[0];
+		
+		int posicaoDessaLetra = Alfabeto.posicaoLetraAlfabeto(umaLetra);
+		
+		assertEquals(posicaoDessaLetra, 14);
+	}
 	
 }

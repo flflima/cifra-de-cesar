@@ -9,7 +9,8 @@ public abstract class Alfabeto
 		
 		for (int i = 0; i < alfabetoMaisculas.length; i++) 
 		{
-			if (letra == alfabetoMaisculas[i])
+			if (Character.toUpperCase(letra) == alfabetoMaisculas[i] ||
+					Character.toLowerCase(letra) == Character.toLowerCase(alfabetoMaisculas[i]))
 			{
 				posicaoLetra = i;
 				break;
