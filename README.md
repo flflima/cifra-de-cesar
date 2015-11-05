@@ -26,4 +26,5 @@ Próximas correções:
 	* Aceitar caracteres especiais;		-- incluído
 	* Aceitar letras;					-- incluído
 	* Se o char não existir exibir '_';	-- incluído
-	* Validar campos de entrada.
+	* Validar campos de entrada;
+	* Decriptografar.
