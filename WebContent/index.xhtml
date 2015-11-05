@@ -10,7 +10,8 @@
 </h:head>
 <body>
 	<h1 align="center">Cifra de César</h1>
-	<h:form>
+	<h:form id="formCifraCesar">
+    	<p:messages id="mensagens" showDetail="true" autoUpdate="true" closable="true" />
 		<p:panelGrid columns="3" layout="grid">
 			<p:row>
 				<p:column>
@@ -26,8 +27,8 @@
 				<p:column>
 					<h5>Informe um valor de Cifra:</h5>
 					<h:panelGrid columns="1" style="margin-left: 100px">
-						<p:inputText id="txt1" value="#{cifraCesarBean.cifra}" />
-						<p:slider for="txt1" />
+						<p:inputText id="idCifra" value="#{cifraCesarBean.cifra}" />
+						<p:slider id="sliderCifra" for="idCifra" />
 					</h:panelGrid>
 					<p:commandButton value="Codificar" id="btnCriptografarSaida" actionListener="#{cifraCesarBean.criptografarSaida()}" update="textoCriptografado"
 						style="top: 10px; margin-left: 150px;" />

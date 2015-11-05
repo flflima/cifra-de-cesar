@@ -2,15 +2,24 @@ package br.com.cifracesar.util;
 
 public abstract class Alfabeto
 {
+
+	private static char[] alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+										'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+										'U', 'V', 'W', 'X', 'Y', 'Z'};
+	
+	public static char[] getAlfabeto() 
+	{
+		return alfabeto;
+	}
+	
 	public static int posicaoLetraAlfabeto(char letra)
 	{
-		char[] alfabetoMaisculas = AlfabetoMaiusculas.getAlfabeto();
 		int posicaoLetra = 0;
 		
-		for (int i = 0; i < alfabetoMaisculas.length; i++) 
+		for (int i = 0; i < alfabeto.length; i++) 
 		{
-			if (Character.toUpperCase(letra) == alfabetoMaisculas[i] ||
-					Character.toLowerCase(letra) == Character.toLowerCase(alfabetoMaisculas[i]))
+			if (Character.toUpperCase(letra) == alfabeto[i] ||
+					Character.toLowerCase(letra) == Character.toLowerCase(alfabeto[i]))
 			{
 				posicaoLetra = i;
 				break;

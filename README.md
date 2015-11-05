@@ -19,12 +19,18 @@ Onde: 	C = Cifra
 		
 Próximas correções:
 
-	* Entender Maiúsculas e Minúsculas;	-- corrigido
-	* Permitir espaços em branco;		-- corrigido
-	* Aceitar pontuação;				-- incluído
+	* Entender Maiúsculas e Minúsculas;	------------------------------ corrigido
+	* Permitir espaços em branco;		------------------------------ corrigido
+	* Aceitar pontuação;				------------------------------ incluído
 	* Aceitar caracteres acentuados;
-	* Aceitar caracteres especiais;		-- incluído
-	* Aceitar letras;					-- incluído
-	* Se o char não existir exibir '_';	-- incluído
-	* Validar campos de entrada;
-	* Decriptografar.
+	* Aceitar caracteres especiais;		------------------------------ incluído
+	* Aceitar letras;					------------------------------ incluído
+	* Se o char não existir exibir '_';	------------------------------ incluído
+	* Decriptografar;
+	* Melhorar o design da página;
+	* Ler um arquivo "*.txt" e criptografar;
+	* Incluir um botão para salvar a saída em um arquivo "*.txt";
+	* Incluir uma página inicial com menus ("Sobre" ...);
+	* Validar input "Valor Cifra" <= 100;	-------------------------- incluído
+	* Incluir um botão "Limpar" para os dois campos de texto;
+	* Mudar o nome do botão de "Codificar" para "Criptografar";

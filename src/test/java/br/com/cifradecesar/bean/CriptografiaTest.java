@@ -4,7 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import br.com.cifracesar.util.AlfabetoMaiusculas;
+import br.com.cifracesar.util.Alfabeto;
 import br.com.cifracesar.util.CriptografiaUtil;
 
 public class CriptografiaTest 
@@ -14,7 +14,7 @@ public class CriptografiaTest
 	@Test
 	public void testeCriptografiaDeCesarApenasComMaiusculas()
 	{
-		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "OI", CIFRA);
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(Alfabeto.getAlfabeto(), "OI", CIFRA);
 		
 		assertEquals("DX", palavraNova);
 	}
@@ -22,7 +22,7 @@ public class CriptografiaTest
 	@Test
 	public void testeCriptografiaDeCesarApenasComMinusculas()
 	{
-		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "oi", CIFRA);
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(Alfabeto.getAlfabeto(), "oi", CIFRA);
 		
 		assertEquals("dx", palavraNova);
 	}
@@ -30,7 +30,7 @@ public class CriptografiaTest
 	@Test
 	public void testeCriptografiaDeCesarComMaiusculasEMinusculas()
 	{
-		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "Oi", CIFRA);
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(Alfabeto.getAlfabeto(), "Oi", CIFRA);
 		
 		assertEquals("Dx", palavraNova);
 	}
@@ -38,7 +38,7 @@ public class CriptografiaTest
 	@Test
 	public void testeCriptografiaDeCesarComEspacosEmBranco()
 	{
-		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "TESTE COM ESPACO", CIFRA);
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(Alfabeto.getAlfabeto(), "TESTE COM ESPACO", CIFRA);
 		
 		assertEquals("ITHIT RDB THEPRD", palavraNova);
 	}
@@ -46,7 +46,7 @@ public class CriptografiaTest
 	@Test
 	public void testeCriptografiaDeCesarComPontuacao()
 	{
-		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(AlfabetoMaiusculas.getAlfabeto(), "TESTE, COM VIRGULA", CIFRA);
+		String palavraNova = CriptografiaUtil.criptografaCifraDeCesar(Alfabeto.getAlfabeto(), "TESTE, COM VIRGULA", CIFRA);
 		
 		assertEquals("ITHIT, RDB KXGVJAP", palavraNova);
 	}

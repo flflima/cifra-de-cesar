@@ -4,11 +4,11 @@ package br.com.cifracesar.util;
 public abstract class CriptografiaUtil
 {
 
-	public static String criptografaCifraDeCesar(char[] alfabetoMaisculas, String palavra, int cifra)
+	public static String criptografaCifraDeCesar(char[] alfabeto, String palavraDeEntrada, int cifra)
 	{
-		int tamanhoAlfabeto = alfabetoMaisculas.length;
+		int tamanhoAlfabeto = alfabeto.length;
 		
-		char[] letrasDaPalavra = palavra.toCharArray();
+		char[] letrasDaPalavra = palavraDeEntrada.toCharArray();
 		
 		StringBuilder palavraCifrada = new StringBuilder();
 		
@@ -25,7 +25,7 @@ public abstract class CriptografiaUtil
 			{
 				int posicaoNoAlfabeto = (Alfabeto.posicaoLetraAlfabeto(letraDaPalavra) + cifra) % tamanhoAlfabeto;
 				
-				char letra = alfabetoMaisculas[posicaoNoAlfabeto];
+				char letra = alfabeto[posicaoNoAlfabeto];
 				
 				if (Alfabeto.isLetraMinuscula(letraDaPalavra))
 				{
