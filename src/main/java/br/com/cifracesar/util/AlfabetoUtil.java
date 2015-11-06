@@ -1,6 +1,6 @@
 package br.com.cifracesar.util;
 
-public abstract class Alfabeto
+public abstract class AlfabetoUtil
 {
 
 	private static char[] alfabeto = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -12,14 +12,14 @@ public abstract class Alfabeto
 		return alfabeto;
 	}
 	
-	public static int posicaoLetraAlfabeto(char letra)
+	public static int posicaoLetraAlfabeto(char letra, char[] alfabetoInformado)
 	{
 		int posicaoLetra = 0;
 		
-		for (int i = 0; i < alfabeto.length; i++) 
+		for (int i = 0; i < alfabetoInformado.length; i++) 
 		{
-			if (Character.toUpperCase(letra) == alfabeto[i] ||
-					Character.toLowerCase(letra) == Character.toLowerCase(alfabeto[i]))
+			if (Character.toUpperCase(letra) == alfabetoInformado[i] ||
+					Character.toLowerCase(letra) == Character.toLowerCase(alfabetoInformado[i]))
 			{
 				posicaoLetra = i;
 				break;
@@ -56,5 +56,16 @@ public abstract class Alfabeto
 		String letra = "" + letraDaPalavra;
 		
 		return letra.matches("[A-Za-z]");
+	}
+
+	public static boolean naoEhUmaLetraMasEhValido(char letraDaPalavra) 
+	{
+		return AlfabetoUtil.isEspacoEmBranco(letraDaPalavra) || 
+				AlfabetoUtil.isSinalPontuacao(letraDaPalavra) || AlfabetoUtil.isNumero(letraDaPalavra);
+	}
+
+	public static boolean ehUmaLetra(char letraDaPalavra)
+	{
+		return AlfabetoUtil.isLetraValida(letraDaPalavra);
 	}
 }

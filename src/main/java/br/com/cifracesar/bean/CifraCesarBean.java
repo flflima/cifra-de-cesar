@@ -9,8 +9,7 @@ import javax.faces.context.FacesContext;
 
 import org.primefaces.context.RequestContext;
 
-import br.com.cifracesar.util.Alfabeto;
-import br.com.cifracesar.util.CriptografiaUtil;
+import br.com.cifracesar.util.criptografador.CifraCesar;
 
 @ManagedBean
 @SessionScoped
@@ -22,9 +21,10 @@ public class CifraCesarBean implements Serializable
 	 */
 	private static final long serialVersionUID = 1L;
 
-	public String entrada;
-	public String saida;
-	public int cifra;
+	private String entrada;
+	private String saida;
+	private int cifra;
+	private CifraCesar criptografia;
 
 	public String getEntrada()
 	{
@@ -69,7 +69,9 @@ public class CifraCesarBean implements Serializable
 		}
 		else
 		{
-			this.saida = CriptografiaUtil.criptografaCifraDeCesar(Alfabeto.getAlfabeto(), entrada, cifra);
+			this.criptografia = new CifraCesar(this.cifra);
+			boolean criptografar = true;
+			this.saida = this.criptografia.criptografa(entrada, criptografar);
 		}
 	}
 }

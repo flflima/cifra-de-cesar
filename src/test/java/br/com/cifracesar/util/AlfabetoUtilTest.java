@@ -1,12 +1,12 @@
-package br.com.cifradecesar.bean;
+package br.com.cifracesar.util;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import br.com.cifracesar.util.Alfabeto;
+import br.com.cifracesar.util.AlfabetoUtil;
 
-public class AlfabetoTest 
+public class AlfabetoUtilTest 
 {
 
 	@Test
@@ -16,7 +16,7 @@ public class AlfabetoTest
 		
 		char umaLetra = letras[0];
 		
-		int posicaoDessaLetra = Alfabeto.posicaoLetraAlfabeto(umaLetra);
+		int posicaoDessaLetra = AlfabetoUtil.posicaoLetraAlfabeto(umaLetra, AlfabetoUtil.getAlfabeto());
 		
 		assertEquals(posicaoDessaLetra, 14);
 	}
@@ -28,7 +28,7 @@ public class AlfabetoTest
 		
 		char umaLetra = letras[0];
 		
-		int posicaoDessaLetra = Alfabeto.posicaoLetraAlfabeto(umaLetra);
+		int posicaoDessaLetra = AlfabetoUtil.posicaoLetraAlfabeto(umaLetra, AlfabetoUtil.getAlfabeto());
 		
 		assertEquals(posicaoDessaLetra, 14);
 	}
@@ -38,7 +38,7 @@ public class AlfabetoTest
 	{
 		char branco = ' ';
 		
-		assertTrue(Alfabeto.isEspacoEmBranco(branco));
+		assertTrue(AlfabetoUtil.isEspacoEmBranco(branco));
 	}
 	
 	@Test
@@ -46,7 +46,7 @@ public class AlfabetoTest
 	{
 		char minuscula = 'm';
 		
-		assertTrue(Alfabeto.isLetraMinuscula(minuscula));
+		assertTrue(AlfabetoUtil.isLetraMinuscula(minuscula));
 	}
 	
 	@Test
@@ -58,11 +58,11 @@ public class AlfabetoTest
 		char pontuacao4 = ':';
 		char pontuacao5 = '!';
 
-		assertTrue(Alfabeto.isSinalPontuacao(pontuacao1));
-		assertTrue(Alfabeto.isSinalPontuacao(pontuacao2));
-		assertTrue(Alfabeto.isSinalPontuacao(pontuacao3));
-		assertTrue(Alfabeto.isSinalPontuacao(pontuacao4));
-		assertTrue(Alfabeto.isSinalPontuacao(pontuacao5));
+		assertTrue(AlfabetoUtil.isSinalPontuacao(pontuacao1));
+		assertTrue(AlfabetoUtil.isSinalPontuacao(pontuacao2));
+		assertTrue(AlfabetoUtil.isSinalPontuacao(pontuacao3));
+		assertTrue(AlfabetoUtil.isSinalPontuacao(pontuacao4));
+		assertTrue(AlfabetoUtil.isSinalPontuacao(pontuacao5));
 	}
 
 	@Test
@@ -71,8 +71,8 @@ public class AlfabetoTest
 		char umNumero = '1';
 		char outroNumero = '9';
 
-		assertTrue(Alfabeto.isNumero(umNumero));
-		assertTrue(Alfabeto.isNumero(outroNumero));
+		assertTrue(AlfabetoUtil.isNumero(umNumero));
+		assertTrue(AlfabetoUtil.isNumero(outroNumero));
 	}
 	
 	@Test
@@ -82,9 +82,9 @@ public class AlfabetoTest
 		char segundaLetra = 'F';
 		char terceiraLetra = 'y';
 
-		assertTrue(Alfabeto.isLetraValida(primeiraLetra));
-		assertTrue(Alfabeto.isLetraValida(segundaLetra));
-		assertTrue(Alfabeto.isLetraValida(terceiraLetra));
+		assertTrue(AlfabetoUtil.isLetraValida(primeiraLetra));
+		assertTrue(AlfabetoUtil.isLetraValida(segundaLetra));
+		assertTrue(AlfabetoUtil.isLetraValida(terceiraLetra));
 	}
 	
 }

@@ -26,11 +26,11 @@ Próximas correções:
 	* Aceitar caracteres especiais;		------------------------------ incluído
 	* Aceitar letras;					------------------------------ incluído
 	* Se o char não existir exibir '_';	------------------------------ incluído
-	* Decriptografar;
+	* Descriptografar;	---------------------------------------------- lógica incluída
 	* Melhorar o design da página;
 	* Ler um arquivo "*.txt" e criptografar;
 	* Incluir um botão para salvar a saída em um arquivo "*.txt";
 	* Incluir uma página inicial com menus ("Sobre" ...);
 	* Validar input "Valor Cifra" <= 100;	-------------------------- incluído
 	* Incluir um botão "Limpar" para os dois campos de texto;
-	* Mudar o nome do botão de "Codificar" para "Criptografar";
+	* Mudar o nome do botão de "Codificar" para "Criptografar";	------ incluído

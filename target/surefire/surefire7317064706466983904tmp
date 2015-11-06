@@ -1,5 +1,5 @@
 #surefire
-#Thu Nov 05 12:22:21 BRST 2015
+#Fri Nov 06 21:25:28 BRST 2015
 enableAssertions=true
 testSuiteDefinitionTestSourceDirectory=C\:\\java-dev\\dev\\cifradecesar\\src\\test\\java
 classPathUrl.39=C\:\\Users\\Felipe\\.m2\\repository\\org\\primefaces\\themes\\trontastic\\1.0.8\\trontastic-1.0.8.jar
@@ -39,11 +39,12 @@ classPathUrl.23=C\:\\Users\\Felipe\\.m2\\repository\\org\\primefaces\\themes\\gl
 classPathUrl.22=C\:\\Users\\Felipe\\.m2\\repository\\org\\primefaces\\themes\\flick\\1.0.8\\flick-1.0.8.jar
 classPathUrl.21=C\:\\Users\\Felipe\\.m2\\repository\\org\\primefaces\\themes\\excite-bike\\1.0.8\\excite-bike-1.0.8.jar
 includes2=**/*TestCase.java
+tc.2=br.com.cifracesar.util.criptografador.CifraCesarDescriptografadorTest
 classPathUrl.20=C\:\\Users\\Felipe\\.m2\\repository\\org\\primefaces\\themes\\eggplant\\1.0.8\\eggplant-1.0.8.jar
 includes1=**/*Test.java
-tc.1=br.com.cifradecesar.bean.CriptografiaTest
+tc.1=br.com.cifracesar.util.criptografador.CifraCesarCriptografadorTest
 includes0=**/Test*.java
-tc.0=br.com.cifradecesar.bean.AlfabetoTest
+tc.0=br.com.cifracesar.util.AlfabetoUtilTest
 excludes0=**/*$*
 failIfNoTests=false
 useManifestOnlyJar=true
