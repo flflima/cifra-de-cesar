@@ -53,6 +53,8 @@ public abstract class Alfabeto
 
 	public static boolean isLetraValida(char letraDaPalavra) 
 	{
-		return Character.isLetter(letraDaPalavra);
+		String letra = "" + letraDaPalavra;
+		
+		return letra.matches("[A-Za-z]");
 	}
 }
