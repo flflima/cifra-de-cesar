@@ -74,4 +74,10 @@ public class CifraCesarBean implements Serializable
 			this.saida = this.criptografia.criptografa(entrada, criptografar);
 		}
 	}
+	
+	public void onCifraChange() {
+		if (this.cifra > 100) {
+	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "", "O valor da Cifra deve ser entre 0 e 100."));
+		}
+	}
 }
