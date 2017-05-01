@@ -30,7 +30,9 @@
 						<p:inputText id="idCifra" value="#{cifraCesarBean.cifra}">
 							<p:ajax event="keyup" listener="#{cifraCesarBean.onCifraChange}" update="mensagens btnCriptografarSaida" />
 						</p:inputText>
-						<p:slider id="sliderCifra" for="idCifra" />
+						<p:slider id="sliderCifra" for="idCifra">
+							<p:ajax event="slideEnd" listener="#{cifraCesarBean.onSlideEnd}" update="mensagens btnCriptografarSaida" />
+						</p:slider>
 					</h:panelGrid>
 					<p:commandButton value="Criptografar" id="btnCriptografarSaida" 
 						actionListener="#{cifraCesarBean.criptografarSaida()}" update="textoCriptografado"
