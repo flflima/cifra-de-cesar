@@ -28,11 +28,13 @@
 					<h5>Informe um valor de Cifra:</h5>
 					<h:panelGrid columns="1" style="margin-left: 100px">
 						<p:inputText id="idCifra" value="#{cifraCesarBean.cifra}">
-							<p:ajax event="blur" listener="#{cifraCesarBean.onCifraChange}" update="mensagens" />
+							<p:ajax event="keyup" listener="#{cifraCesarBean.onCifraChange}" update="mensagens btnCriptografarSaida" />
 						</p:inputText>
 						<p:slider id="sliderCifra" for="idCifra" />
 					</h:panelGrid>
-					<p:commandButton value="Criptografar" id="btnCriptografarSaida" actionListener="#{cifraCesarBean.criptografarSaida()}" update="textoCriptografado"
+					<p:commandButton value="Criptografar" id="btnCriptografarSaida" 
+						actionListener="#{cifraCesarBean.criptografarSaida()}" update="textoCriptografado"
+						disabled="#{!cifraCesarBean.showButton}"
 						style="top: 10px; margin-left: 150px;" />
 				</p:column>
 			</p:row>

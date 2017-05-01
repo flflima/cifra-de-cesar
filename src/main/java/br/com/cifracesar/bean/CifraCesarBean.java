@@ -2,6 +2,7 @@ package br.com.cifracesar.bean;
 
 import java.io.Serializable;
 
+import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -25,6 +26,8 @@ public class CifraCesarBean implements Serializable
 	private String saida;
 	private int cifra;
 	private CifraCesar criptografia;
+
+	private boolean showButton;
 
 	public String getEntrada()
 	{
@@ -56,6 +59,11 @@ public class CifraCesarBean implements Serializable
 		this.cifra = cifra;
 	}
 	
+	@PostConstruct
+	public void init() {
+		this.showButton = false;
+	}
+	
 	public void criptografarSaida()
 	{
 		if (cifra > 100)
@@ -76,8 +84,15 @@ public class CifraCesarBean implements Serializable
 	}
 	
 	public void onCifraChange() {
+		this.showButton = !(this.cifra > 100);
+		
 		if (this.cifra > 100) {
 	        FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_WARN, "", "O valor da Cifra deve ser entre 0 e 100."));
 		}
+		System.out.println(">>> showButton: " + this.showButton);
+	}
+	
+	public boolean isShowButton() {
+		return this.showButton;
 	}
 }
