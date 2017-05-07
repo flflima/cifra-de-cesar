@@ -4,28 +4,26 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:p="http://primefaces.org/ui">
-
 <h:head>
 	<title>Cifra de César</title>
+	<link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css" ></link>
 </h:head>
-<body>
+<h:body>
 	<h1 align="center">Cifra de César</h1>
 	<h:form id="formCifraCesar">
     	<p:messages id="mensagens" showDetail="true" autoUpdate="true" closable="true" />
-		<p:panelGrid columns="3" layout="grid">
-			<p:row>
-				<p:column>
-					<h5>Informe uma palavra:</h5>
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-md-4">
+    				<h3 class="text-center">Informe uma palavra:</h3>
 					<p:inputTextarea rows="5" cols="30" counter="display"
 						maxlength="25" counterTemplate="{0} caractere(s) restante(s)."
 						autoResize="false" style="margin-left: 40px" value="#{cifraCesarBean.entrada}" />
 					<h:outputText id="display" style="float: left; margin-left: 40px;" />
-				</p:column>
-			</p:row>
-
-			<p:row>
-				<p:column>
-					<h5>Informe um valor de Cifra:</h5>
+				</div>
+				
+    			<div class="col-md-4">
+					<h3 class="text-center">Informe um valor de Cifra:</h3>
 					<h:panelGrid columns="1" style="margin-left: 100px">
 						<p:inputText id="idCifra" value="#{cifraCesarBean.cifra}">
 							<p:ajax event="keyup" listener="#{cifraCesarBean.onCifraChange}" update="mensagens btnCriptografarSaida" />
@@ -38,17 +36,15 @@
 						actionListener="#{cifraCesarBean.criptografarSaida()}" update="textoCriptografado"
 						disabled="#{!cifraCesarBean.showButton}"
 						style="top: 10px; margin-left: 150px;" />
-				</p:column>
-			</p:row>
-
-			<p:row>
-				<p:column>
-					<h5>Palavra Cifrada:</h5>
+    			</div>
+				
+    			<div class="col-md-4">
+					<h3 class="text-center">Palavra Cifrada:</h3>
 					<p:inputTextarea rows="5" cols="30" autoResize="false" id="textoCriptografado" value="#{cifraCesarBean.saida}" disabled="true" 
 						style="margin-left: 40px;" />
-				</p:column>
-			</p:row>
-		</p:panelGrid>
+    			</div>
+    		</div>
+    	</div>
 	</h:form>
-</body>
+</h:body>
 </html>
